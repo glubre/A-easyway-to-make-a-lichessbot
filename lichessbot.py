@@ -113,8 +113,8 @@ def play_game(li, game_id, user_profile, config):
         engine_path = os.path.join(cfg["dir"], cfg["variantname"])
         bookname="bookchen.bin"
     engineeng = engine.SimpleEngine.popen_uci(engine_path)
-    engineeng.configure({'Threads':5})
-    engineeng.configure({'Hash':120})
+    engineeng.configure({'Threads':8})
+    engineeng.configure({'Hash':60})
     try:
         engineeng.configure({'EvalFile':"nn-517c4f68b5df.nnue"})
     except:
